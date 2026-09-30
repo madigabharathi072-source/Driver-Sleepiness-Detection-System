@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class DriverSleepiness {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int sleepyCount = 0;
+
+        System.out.println("================================");
+        System.out.println(" DRIVER SLEEPINESS DETECTION");
+        System.out.println("================================");
+
+        System.out.println("Enter 1 if eyes are open");
+        System.out.println("Enter 0 if eyes are closed");
+
+        for (int i = 1; i <= 5; i++) {
+
+            System.out.print("\nCheck " + i + ": ");
+            int eyeStatus = sc.nextInt();
+
+            if (eyeStatus == 0) {
+
+                sleepyCount++;
+
+                System.out.println("Eyes closed detected!");
+
+            } else if (eyeStatus == 1) {
+
+                sleepyCount = 0;
+
+                System.out.println("Driver is awake.");
+
+            } else {
+
+                System.out.println("Invalid input.");
+            }
+
+            if (sleepyCount >= 3) {
+
+                System.out.println("\n⚠️ WARNING!");
+                System.out.println("Possible driver drowsiness detected.");
+                System.out.println("Please take a safe break.");
+
+                break;
+            }
+        }
+
+        System.out.println("\nSystem monitoring stopped.");
+
+        sc.close();
+    }
+}
