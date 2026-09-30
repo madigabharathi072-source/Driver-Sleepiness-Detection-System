@@ -1,0 +1,30 @@
+Main Features:
+
+Monitor driver's eye status
+Detect possible drowsiness
+Generate a warning message
+Maintain a simple detection count
+Stop the alert when the driver is awake
+
+output:
+================================
+ DRIVER SLEEPINESS DETECTION
+================================
+
+Enter 1 if eyes are open
+Enter 0 if eyes are closed
+
+Check 1: 0
+Eyes closed detected!
+
+Check 2: 0
+Eyes closed detected!
+
+Check 3: 0
+Eyes closed detected!
+
+⚠️ WARNING!
+Possible driver drowsiness detected.
+Please take a safe break.
+
+System monitoring stopped.
